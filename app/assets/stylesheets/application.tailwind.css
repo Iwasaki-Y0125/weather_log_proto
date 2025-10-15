@@ -7,11 +7,10 @@
   max-width: 375px;
   height: 667px;
   background-color: white;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  position: relative;
+  /* position: relative; */
 }
 
 /* 一覧ページ専用のスクロール設定 */
