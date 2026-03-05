@@ -1,9 +1,25 @@
-# 秋のお天気🍁ゆらぎログ
+## サービス名  : **秋のお天気🍁ゆらぎログ**
 
-秋は、日ごとに気温や天候が移ろい、心もまた揺らぎやすい季節。
-このアプリは、天候の変化に伴う「心のゆらぎ」を見える化し、セルフケアの気づきにつなげることを目指しています。
+## サービス概要
+季節や天候の変化に伴う「心のゆらぎ」を見える化するアプリです。  
+気象データと気分ログを組み合わせることで、セルフケアへの気づきにつなげます。
 
----
+## 開発補足
+- RUNTEQミニアプリWeek2025に応募
+- 設計から実装までを10日で進め、短期間でプロトタイプを作成
+- 生成AIを補助的に活用し、アイデア整理や実装検討の速度を高めた
+
+## お知らせ
+現在このサービスの公開は停止しています。画面イメージは、下記でご覧ください。
+
+![screenshot01](app/assets/images/screenshots/weather_log_proto_screenshot01.png)
+![screenshot02](app/assets/images/screenshots/weather_log_proto_screenshot02.png)
+![screenshot03](app/assets/images/screenshots/weather_log_proto_screenshot03.png)
+![screenshot04](app/assets/images/screenshots/weather_log_proto_screenshot04.png)
+![screenshot05](app/assets/images/screenshots/weather_log_proto_screenshot05.png)
+
+
+
 
 ## コンセプト
 
@@ -14,7 +30,6 @@
   - 天気・気温・湿度・気圧と気分ログを照らし合わせて傾向を把握
   - 日々のゆらぎを振り返ることで安心感やセルフケアのヒントにつなげる
 
----
 
 ## 主な機能
 
@@ -26,7 +41,7 @@
   - 任意で一言日記を入力（100文字以内）
   - 過去の投稿を日付ごとに気象データと一緒に一覧表示
 
----
+
 
 ## 技術スタック
 
@@ -47,21 +62,3 @@
 ### デプロイ
 - バックエンド: Render
 - フロントエンド: GitHub Pages
-- CI/CD: GitHub Actions
-
----
-
-## 今後の修正予定
-- 日記一覧ページの背景表示の不具合
-- 有効ではない郵便番号の例外処理を追加
-- フォントやレイアウトの修正
-
-## 機能追加予定
-- ページネーションの追加
-- ユーザー設定変更機能
-- パスワード再設定機能
-- アカウント削除機能
-- 明日の天気表示機能
-- 気分と天気のグラフ機能
-- 気分と天気を検索、絞り込み表示
-- 現在位置で記録できる設定の追加
