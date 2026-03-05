@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
 
-  validates :password, length: { minimum: 3 }, if: -> { new_record? || changes[:crypted_password] }
+  validates :password, length: { minimum: 12 }, if: -> { new_record? || changes[:crypted_password] }
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] }
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
@@ -24,8 +24,6 @@ class User < ApplicationRecord
     if location_data
       self.latitude = location_data[:latitude]
       self.longitude = location_data[:longitude]
-      self.city = location_data[:city]
-      self.town = location_data[:town]
     else
       errors.add(:postal_code, "無効な郵便番号です")
       throw(:abort)

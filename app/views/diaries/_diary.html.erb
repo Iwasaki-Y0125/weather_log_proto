@@ -2,7 +2,6 @@
 
 <div class="bg-white rounded-xl border border-gray-200 p-5 mb-5 shadow-sm opacity-90">
 
-  <!-- 記録時刻 -->
   <div class="text-center mb-4">
     <p class="text-sm text-gray-500 bg-gray-50 rounded-full px-3 py-1 inline-block">
       <%= weather ? l(weather.created_at.in_time_zone("Tokyo"), format: :long) : l(diary.created_at.in_time_zone("Tokyo"), format: :long) %>
@@ -11,7 +10,6 @@
 
   <hr class="border-gray-200 mb-4">
 
-  <!-- 天気情報 -->
   <% if weather %>
     <div class="mb-4">
       <div class="bg-blue-50 rounded-lg p-3">
@@ -42,18 +40,17 @@
 
   <hr class="border-gray-200 mb-4">
 
-  <!-- 気分と一言日記 -->
-  <% color = case diary.symptom_level
-    when "very_good" then "blue"
-    when "good"      then "green"
-    when "neutral"   then "yellow"
-    when "bad"       then "orange"
-    when "very_bad"  then "red"
-    else "gray"
+  <% badge_class = case diary.symptom_level
+    when "very_good" then "bg-blue-100"
+    when "good"      then "bg-green-100"
+    when "neutral"   then "bg-yellow-100"
+    when "bad"       then "bg-orange-100"
+    when "very_bad"  then "bg-red-100"
+    else "bg-gray-100"
   end %>
 
   <div class="flex items-start space-x-4 bg-gray-50 rounded-lg p-4">
-    <div class="w-16 h-16 text-<%= color %>-500 flex-shrink-0">
+    <div class="w-16 h-16 rounded-full p-3 <%= badge_class %> flex-shrink-0">
       <%= render "mood_icons/#{diary.symptom_level}" %>
     </div>
 
